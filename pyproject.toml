@@ -1,0 +1,32 @@
+[project]
+name = "kl"
+version = "0.1.0"
+authors = [
+  { name="Tom Young" },
+]
+description = "Fast access to kubernetes logs"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit==3.4.*"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/t-young31/kl"
+
+[tool.ruff.lint.isort]
+case-sensitive = true
+
+[project.scripts]
+kl = "kl.main:cli"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
